@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match Results</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        body {
+            font-family: 'Press Start 2P', 'Roboto', 'Helvetica Neue', Arial, sans-serif; /* Gaming font */
+            background: linear-gradient(45deg, #0f0, #00f, #f00, #0ff, #ff0, #f0f);
+            background-size: 400% 400%;
+            animation: gradient 10s ease infinite;
+            color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-weight: 400;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            background-color: rgba(0, 0, 0, 0.85);
+            border: 1px solid #3a3a3a;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+            border-radius: 15px; /* Rounded corners */
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+        }
+        .container.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        header, footer {
+            text-align: center;
+            padding: 10px;
+            border-bottom: 1px solid #3a3a3a;
+            border-radius: 15px; /* Rounded corners */
+        }
+        footer {
+            border-top: 1px solid #3a3a3a;
+            border-bottom: none;
+            border-radius: 0 0 15px 15px; /* Rounded corners for bottom */
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            color: #00ff00; /* Neon green */
+            text-shadow: 2px 2px 8px #000;
+        }
+        .score {
+            font-size: 3em;
+            text-align: center;
+            margin: 20px 0;
+            color: #ff0000; /* Neon red */
+            text-shadow: 2px 2px 8px #000;
+        }
+        .score span {
+            color: #00ff00; /* Neon green */
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #00ffff; /* Neon cyan */
+            transition: color 0.3s ease-in-out;
+        }
+        nav ul li a:hover {
+            color: #ff00ff; /* Neon magenta */
+        }
+        .table-container {
+            margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 15px; /* Rounded corners */
+            overflow: hidden;
+        }
+        table, th, td {
+            border: 1px solid #3a3a3a;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            transform: translateX(-100%);
+            opacity: 0;
+            transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        }
+        th {
+            background-color: #333;
+            color: #00ff00; /* Neon green */
+            text-shadow: 2px 2px 8px #000;
+        }
+        td {
+            color: #dcdcdc;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        th.visible, td.visible {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MATCH RESULTS</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#summary">Summary</a></li>
+                <li><a href="#scoreboard">Scoreboard</a></li>
+                <li><a href="#timeline">Timeline</a></li>
+                <li><a href="#performance">Performance</a></li>
+            </ul>
+        </nav>
+        <div class="score">
+            <span>2</span> - 5 DEFEAT
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Highlights</th>
+                        <th>First Half</th>
+                        <th>Second Half</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Round Wins</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>First Bloods</td>
+                        <td>3</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Elimination Wins</td>
+                        <td>4</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>Spikes Deployed</td>
+                        <td>1</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Post-Spike Wins</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Defusals</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Detonations</td>
+                        <td>2</td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <footer>
+            &copy; 2050 Game Results. All rights reserved.
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const container = document.querySelector('.container');
+            container.classList.add('visible');
+
+            setTimeout(() => {
+                document.querySelectorAll('th, td').forEach((cell, index) => {
+                    setTimeout(() => {
+                        cell.classList.add('visible');
+                    }, index * 100); // Delay for each cell
+                });
+            }, 1000); // Start animation after the container is visible
+        });
+
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
