@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Match Results</title>
+    <title>Opada Saleh - Portfolio</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
@@ -44,175 +44,162 @@
             opacity: 1;
             transform: translateY(0);
         }
-        header, footer {
-            text-align: center;
-            padding: 10px;
-            border-bottom: 1px solid #3a3a3a;
-            border-radius: 15px; /* Rounded corners */
+
+        .skills-container, .projects-container, .contact {
+            margin-top: 20px;
         }
-        footer {
-            border-top: 1px solid #3a3a3a;
-            border-bottom: none;
-            border-radius: 0 0 15px 15px; /* Rounded corners for bottom */
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2em;
-            color: #00ff00; /* Neon green */
-            text-shadow: 2px 2px 8px #000;
-        }
-        .score {
-            font-size: 3em;
-            text-align: center;
-            margin: 20px 0;
-            color: #ff0000; /* Neon red */
-            text-shadow: 2px 2px 8px #000;
-        }
-        .score span {
-            color: #00ff00; /* Neon green */
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #00ffff; /* Neon cyan */
-            transition: color 0.3s ease-in-out;
-        }
-        nav ul li a:hover {
-            color: #ff00ff; /* Neon magenta */
-        }
-        .table-container {
-            margin: 20px 0;
-        }
+
         table {
             width: 100%;
             border-collapse: collapse;
-            border-radius: 15px; /* Rounded corners */
-            overflow: hidden;
+            margin-bottom: 20px;
         }
-        table, th, td {
-            border: 1px solid #3a3a3a;
-        }
+
         th, td {
+            border: 1px solid #3a3a3a;
             padding: 10px;
-            text-align: center;
-            transform: translateX(-100%);
-            opacity: 0;
-            transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+            text-align: left;
         }
+
         th {
-            background-color: #333;
-            color: #00ff00; /* Neon green */
-            text-shadow: 2px 2px 8px #000;
+            background-color: #444;
         }
+
         td {
-            color: #dcdcdc;
-            background-color: rgba(0, 0, 0, 0.7);
-        }
-        th.visible, td.visible {
-            transform: translateX(0);
-            opacity: 1;
+            background-color: #333;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>MATCH RESULTS</h1>
+            <h1>Opada Saleh - Portfolio</h1>
         </header>
+        <div class="about">
+            <p>Hello! I'm Opada Saleh, a Computer Science student and I wish to be the KING.</p>
+        </div>
         <nav>
             <ul>
-                <li><a href="#summary">Summary</a></li>
-                <li><a href="#scoreboard">Scoreboard</a></li>
-                <li><a href="#timeline">Timeline</a></li>
-                <li><a href="#performance">Performance</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <div class="score">
-            <span>2</span> - 5 DEFEAT
-        </div>
-        <div class="table-container">
-            <table>
+        <div class="skills-container" id="skills">
+            <table class="skills">
                 <thead>
                     <tr>
-                        <th>Highlights</th>
-                        <th>First Half</th>
-                        <th>Second Half</th>
+                        <th>Skill</th>
+                        <th>Level</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Round Wins</td>
-                        <td>1</td>
-                        <td>1</td>
+                        <td>Python</td>
+                        <td>Advanced</td>
                     </tr>
                     <tr>
-                        <td>First Bloods</td>
-                        <td>3</td>
-                        <td>2</td>
+                        <td>C++</td>
+                        <td>Intermediate</td>
                     </tr>
                     <tr>
-                        <td>Elimination Wins</td>
-                        <td>4</td>
-                        <td>3</td>
+                        <td>C</td>
+                        <td>Intermediate</td>
                     </tr>
                     <tr>
-                        <td>Spikes Deployed</td>
-                        <td>1</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>Post-Spike Wins</td>
-                        <td>1</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>Defusals</td>
-                        <td>0</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>Detonations</td>
-                        <td>2</td>
-                        <td>1</td>
+                        <td>Fullstack Development</td>
+                        <td>Intermediate</td>
                     </tr>
                 </tbody>
             </table>
         </div>
+        <div class="projects-container" id="projects">
+            <table class="projects">
+                <thead>
+                    <tr>
+                        <th>Project</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Portfolio Website</td>
+                        <td>A personal portfolio website to showcase my skills and projects.</td>
+                    </tr>
+                    <tr>
+                        <td>Python Game</td>
+                        <td>A fun and interactive game developed using Python.</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript Calculator</td>
+                        <td>A simple calculator app built using JavaScript, HTML, and CSS.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="contact" id="contact">
+            <p>Contact me: <a href="mailto:opadasadleh@gmail.com">opadasadleh@gmail.com</a></p>
+            <form class="contact-form" action="https://formspree.io/f/mqaagpgj" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="_replyto" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <p class="success-message" style="display:none;">Thank you for your message. I will get back to you soon!</p>
+        </div>
         <footer>
-            &copy; 2050 Game Results. All rights reserved.
+            <p>&copy; 2025 Opada Saleh. All rights reserved.</p>
         </footer>
     </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const container = document.querySelector('.container');
-            container.classList.add('visible');
+            if (container) {
+                container.classList.add('visible');
+            }
 
-            setTimeout(() => {
-                document.querySelectorAll('th, td').forEach((cell, index) => {
-                    setTimeout(() => {
-                        cell.classList.add('visible');
-                    }, index * 100); // Delay for each cell
+            const cells = document.querySelectorAll('.cell');
+            cells.forEach((cell, index) => {
+                setTimeout(() => {
+                    cell.classList.add('visible');
+                }, index * 100); // Delay for each cell
+            });
+
+            const form = document.querySelector('.contact-form');
+            const successMessage = document.querySelector('.success-message');
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const formData = new FormData(form);
+                fetch(form.action, {
+                    method: form.method,
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }).then(response => {
+                    if (response.ok) {
+                        form.reset();
+                        successMessage.style.display = 'block';
+                    } else {
+                        alert('There was a problem with your submission. Please try again.');
+                    }
+                }).catch(error => {
+                    alert('There was a problem with your submission. Please try again.');
                 });
-            }, 1000); // Start animation after the container is visible
+            });
         });
 
         document.querySelectorAll('nav ul li a').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
     </script>
