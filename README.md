@@ -1,7 +1,7 @@
 # 🕵️‍♂️ "Big Brother is Watching You" - Cheat Sheet
 
 ## 🔍 What It Means
-```mermaid
+mermaid
 graph TD
     A[You] --> B[Every digital action]
     B --> C[Stored forever]
@@ -49,7 +49,7 @@ Copy
 Download
 
 ### Bonus: Discussion Answer Templates
-```markdown
+markdown
 ## 🤖 Standard Exam Answers
 
 **Q:** "Is mass surveillance justified?"  
